@@ -1,0 +1,25 @@
+<h1 style="margin: 0 auto">Thêm sách mới</h1>
+<hr>
+<h4 class="mt-5" > Thêm sách mới</h4>
+<form *ngIf="AddBookForm" [formGroup]="AddBookForm" (ngSubmit)="submit()">
+  <div class="input-group input-group-sm mb-3 mt-2">
+    <span class="input-group-text" id="title">Title</span>
+    <input type="text" class="form-control" aria-label="title" formControlName="title" aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <div class="input-group input-group-sm mb-3 mt-2">
+    <span class="input-group-text" id="author">Author</span>
+    <input type="text" class="form-control" aria-label="author" formControlName="author" aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <div class="input-group input-group-sm mb-3 mt-2">
+    <span class="input-group-text" id="description">Description</span>
+    <textarea rows="4" type="text" class="form-control" aria-label="description" formControlName="description" aria-describedby="inputGroup-sizing-sm"></textarea>
+  </div>
+<div class="row">
+  <div class="col-2">
+    <button type="submit" class="btn btn-outline-success">Thêm sách</button>
+    <a  class="btn btn-outline-danger" style="margin-left: 8px " [routerLink]="['/']">Thoát</a>
+  </div>
+
+</div>
+</form>
+
